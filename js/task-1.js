@@ -10,11 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
             user.hobby = 'skydiving';
             user.premium = false;
             user.mood = 'happy';
-            const keys = Object.keys(user)
-            for (const key of keys) {
-                alert(key)
-                alert(user[key])
+            for (const [key, value] of Object.entries(user)) {
+                alert(`${key}: ${value}`);
             }
+
         };
         updateUserInfo(user);
     });

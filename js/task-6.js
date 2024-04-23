@@ -1,23 +1,34 @@
+const products = [
+    { name: 'Радар', price: 1300, quantity: 4 },
+    { name: 'Сканер', price: 2700, quantity: 3 },
+    { name: 'Дроїд', price: 400, quantity: 7 },
+    { name: 'Захоплення', price: 1200, quantity: 2 },
+];
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('task-6-button').addEventListener('click', function () {
+    document.getElementById('task-6-button-1').addEventListener('click', function () {
+        const calculateTotalPrice = function (allProducts, productName) {
+            let totalPrice;
 
-        let input;
-        let numbers = [];
-        let total = 0;
-        do {
-            input = prompt(`Enter a number to add it to the total sum of numbers. Press cancel to finish.`);
-            if (input !== null) {
-                let currentNumber = parseInt(input);
-                if (/^\d+$/.test(input)) {
-                    numbers.push(currentNumber);
-                } else {
-                    alert("Please enter a valid number!");
+            for (const product of allProducts) {
+                if (product.name === productName) {
+                    totalPrice = product.price * product.quantity;
                 }
             }
-        } while (input !== null);
-        for (let i = 0; i< numbers.length; i += 1) {
-                total += numbers[i];
-        } 
-        alert(`Final total is ${total}`);
+            return totalPrice
+        };
+        console.log(calculateTotalPrice(products, 'Радар'));
+    });
+    document.getElementById('task-6-button-2').addEventListener('click', function () {
+        const calculateTotalPrice = function (allProducts, productName) {
+            let totalPrice;
+
+            for (const product of allProducts) {
+                if (product.name === productName) {
+                    totalPrice = product.price * product.quantity;
+                }
+            }
+            return totalPrice
+        };
+        console.log(calculateTotalPrice(products, 'Дроїд'));
     });
 });

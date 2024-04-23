@@ -1,48 +1,64 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('task-3-button-1').addEventListener('click', function() {
-        const findLongestWord = function () {
-            let string = prompt('Find a longest word script')
-            const arr = string.split(" ");
-            let longestWord = arr[0];
-
-            for (let i = 0; i < arr.length; i += 1) {
-                if (longestWord.length < arr[i].length) {
-                    longestWord = arr[i];
+        const findBestEmployee = function (employees) {
+            const values = Object.values(employees);
+            const keys = Object.keys(employees);
+            let init = 0;
+            let bestEmployee;
+            for (let i = 0; i < values.length; i += 1) {
+                if (init < values[i]) {
+                    init = values[i];
+                    bestEmployee = i
                 }
             }
-
-            return longestWord;
+            alert(keys[bestEmployee])
         };
-        alert(findLongestWord());
+            findBestEmployee({
+                ann: 29,
+                david: 35,
+                helen: 1,
+                lorence: 99,
+            })
     });
     document.getElementById('task-3-button-2').addEventListener('click', function() {
-        const findLongestWord = function (string) {
-            const arr = string.split(" ");
-            let longestWord = arr[0]
-
-            for (let i = 0; i< arr.length; i += 1) {
-                if (longestWord.length < arr[i].length) {
-                    longestWord = arr[i];
+        const findBestEmployee = function (employees) {
+            const values = Object.values(employees);
+            const keys = Object.keys(employees);
+            let init = 0;
+            let bestEmployee;
+            for (let i = 0; i < values.length; i += 1) {
+                if (init < values[i]) {
+                    init = values[i];
+                    bestEmployee = i
                 }
             }
-
-            return longestWord;
+            alert(keys[bestEmployee])
         };
-        alert(findLongestWord('Google do a roll')); // 'Google'
+        findBestEmployee({
+            poly: 12,
+            mango: 17,
+            ajax: 4,
+        })
     });
     document.getElementById('task-3-button-3').addEventListener('click', function() {
-        const findLongestWord = function (string) {
-            const arr = string.split(" ");
-            let longestWord = arr[0];
-
-            for (let i = 0; i < arr.length; i += 1) {
-                if (longestWord.length < arr[i].length) {
-                    longestWord = arr[i];
+        const findBestEmployee = function (employees) {
+            const values = Object.values(employees);
+            const keys = Object.keys(employees);
+            let init = 0;
+            let bestEmployee;
+            for (let i = 0; i < values.length; i += 1) {
+                if (init < values[i]) {
+                    init = values[i];
+                    bestEmployee = i
                 }
             }
-
-            return longestWord;
+            alert(keys[bestEmployee])
         };
-        alert(findLongestWord('May the force be with you')); // 'force'
+        findBestEmployee({
+            lux: 147,
+            david: 21,
+            kiwi: 19,
+            chelsy: 38,
+        })
     });
 });
