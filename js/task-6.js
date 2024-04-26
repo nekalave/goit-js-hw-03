@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             return totalPrice
         };
-        console.log(calculateTotalPrice(products, 'Радар'));
+        alert(calculateTotalPrice(products, 'Радар'));
     });
     document.getElementById('task-6-button-2').addEventListener('click', function () {
         const calculateTotalPrice = function (allProducts, productName) {
@@ -29,6 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             return totalPrice
         };
-        console.log(calculateTotalPrice(products, 'Дроїд'));
+        alert(calculateTotalPrice(products, 'Дроїд'));
     });
 });
